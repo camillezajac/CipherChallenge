@@ -39,17 +39,17 @@ int main(int argc, char *argv[]) {
 	
 	cout << "Frequency of uppercase letters: " << endl;
 	for(char caps = 'A'; caps <= 'Z'; caps++) {
-		cout << "Letter " << caps << " is " << setw(4) << frequency[caps] << " times." << endl;
+		cout << caps << ": " << setw(4) << frequency[caps] << " times." << endl;
 		double frequencyDoub = (double) frequency[caps];
 		double percent = (frequencyDoub/total)*100;
-		cout << " Percent of total: " << percent << endl;			
+		cout << " Percent of frequency: " << percent << endl;			
 	}
 	cout << "Total: " << total << endl;
 
 	// cout << "Frequency of the lower case letters: " << endl;
 	// for(char lower = 'a'; lower <= 'z'; lower++)
 	// {
-	// 	cout << "Letter " << lower << " is " << setw(4) << frequency[lower] << " times." << endl;
+	// 	cout << lower << ": " << setw(4) << frequency[lower] << " times." << endl;
 	// }
 
 	return 0; 
