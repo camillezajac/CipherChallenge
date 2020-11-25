@@ -16,20 +16,16 @@ int main(int argc, char *argv[]) {
 	char code;
 	double total;
 	
-	//Loop through ASCII characters to get the frequency of each
+	//find frequency of each ASCII char
 	for(int ASCII = 0; ASCII < 128; ASCII++) {
 		frequency[ASCII] = 0;
 	}
 
 	inFile.open("cipher.txt", ios::in); //Reads file
-	
-	//Check for error opening the file
 	if(inFile.fail()) {
 		cout << "Error: File not found!" << endl << endl; 
 	} else {
 		oneChar = inFile.get();
-
-		//End of file
 		while(inFile.eof() == false) {
 			//When not empty character
 			if(oneChar != ' ') {
@@ -39,11 +35,9 @@ int main(int argc, char *argv[]) {
 			oneChar = inFile.get();
 		}
 	}
-	
 	inFile.close();
 	
 	cout << "Frequency of uppercase letters: " << endl;
-	
 	for(char caps = 'A'; caps <= 'Z'; caps++) {
 		cout << "Letter " << caps << " is " << setw(4) << frequency[caps] << " times." << endl;
 		double frequencyDoub = (double) frequency[caps];
