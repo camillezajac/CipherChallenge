@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
 	char code;
 	double total;
 	
-	//find frequency of each ASCII char
+	//frequency of each ASCII char
 	for(int ASCII = 0; ASCII < 128; ASCII++) {
 		frequency[ASCII] = 0;
 	}
