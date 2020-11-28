@@ -11,12 +11,12 @@ int chartonum(char cha){
 int main(int argc, char *argv[]) {
 	fstream inFile;
 	char oneChar;
-	char ASCII[128] = {0}; //127 characters of the ASCII +1 
+	char ASCII[128] = {0}; //127 chars ASCII +1 
 	int frequency[128];
 	char code;
 	double total;
 	
-	//frequency of each ASCII char
+	//frequency ASCII chars
 	for(int ASCII = 0; ASCII < 128; ASCII++) {
 		frequency[ASCII] = 0;
 	}
